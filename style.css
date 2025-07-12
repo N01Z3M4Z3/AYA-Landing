@@ -2,11 +2,15 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
+  margin: 0;
   padding: 25px;
   text-align: center;
   font-family: Chathura, sans-serif;
-  margin: 0;
 }
 
 h1, h4 {
@@ -17,17 +21,17 @@ h1, h4 {
   background-color: #f7ecce;
   border: 3px double #dcd3ba;
   color: #b5514d;
-  font-family: Warnes, cursive;
+  font-family: Kdam Thmor Pro, cursive;
   padding: 20px;
-  max-width: 1000px;
   margin: 0 auto;
 }
 
 .section {
   font-size: 24px;
-  padding: 20px;
+  padding: 100px 20px;
   margin: 20px auto;
-  max-width: 800px;
+  height: 100vh;
+  border-bottom: 1px solid #ddd;
 }
 
 .bodyun {
@@ -55,6 +59,49 @@ img {
   margin-top: 15px;
 }
 
+.navbar {
+  background-color: #333;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 18px;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+.spec-table {
+  margin: 30px auto;
+  width: 80%;
+  border-collapse: collapse;
+  font-size: 20px;
+  background-color: #fff;
+}
+
+.spec-table th,
+.spec-table td {
+  border: 1px solid #ccc;
+  padding: 12px 20px;
+  text-align: left;
+}
+
+.spec-table th {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.spec-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
 @media screen and (max-width: 768px) {
   body {
     padding: 10px;
@@ -62,7 +109,8 @@ img {
 
   .section {
     font-size: 18px;
-    padding: 15px;
+    padding: 30px 10px;
+    height: auto;
   }
 
   .head {
