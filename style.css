@@ -8,63 +8,31 @@ html {
 
 body {
   margin: 0;
-  padding: 25px;
-  text-align: center;
   font-family: Chathura, sans-serif;
-}
-
-h1, h4 {
-  margin-bottom: 10px;
-}
-
-.head {
-  background-color: #f7ecce;
-  border: 3px double #dcd3ba;
-  color: #b5514d;
-  font-family: Kdam Thmor Pro, cursive;
-  padding: 20px;
-  margin: 0 auto;
-}
-
-.section {
-  font-size: 24px;
-  padding: 100px 20px;
-  margin: 20px auto;
-  height: 100vh;
-  border-bottom: 1px solid #ddd;
-}
-
-.bodyun {
-  background-color: #e2ad4d;
-  border: 4px inset #c09444;
-  color: #000;
-}
-
-.bodydeux {
-  background-color: #000;
-  border: 4px groove #111;
-  color: #fff;
-}
-
-.bodyquatre,
-.bodycinq {
-  background-color: #eee;
-  border: 3px solid #ccc;
+  background-color: #fdfdfd;
   color: #222;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  margin-top: 15px;
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
+/* Navigation */
 .navbar {
   background-color: #333;
-  padding: 10px;
+  padding: 15px 0;
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 999;
+}
+
+.nav-container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }
 
 .navbar a {
@@ -72,48 +40,130 @@ img {
   text-decoration: none;
   margin: 0 15px;
   font-size: 18px;
+  transition: color 0.2s ease;
 }
 
 .navbar a:hover {
-  text-decoration: underline;
+  color: #ffa726;
 }
 
-.spec-table {
-  margin: 30px auto;
-  width: 80%;
-  border-collapse: collapse;
+/* Header */
+.head {
+  text-align: center;
+  background-color: #fff7e6;
+  border-bottom: 2px solid #e2c185;
+  padding: 40px 20px;
+}
+
+.head h1 {
+  font-family: "Kdam Thmor Pro", sans-serif;
+  font-size: 2em;
+  color: #b5514d;
+}
+
+/* Sections */
+.section {
+  padding: 60px 0;
+  text-align: left;
+}
+
+.intro, .summary {
   font-size: 20px;
-  background-color: #fff;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.feature-block {
+  background-color: #f8f8f8;
+  border-left: 4px solid #ffa726;
+  padding: 20px;
+  margin-bottom: 25px;
+}
+
+.feature-block h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+ul, ol {
+  padding-left: 20px;
+}
+
+ul li, ol li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+/* Image */
+.product-img {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+/* Table */
+.spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
 }
 
 .spec-table th,
 .spec-table td {
-  border: 1px solid #ccc;
-  padding: 12px 20px;
+  border: 1px solid #ddd;
+  padding: 12px;
   text-align: left;
 }
 
 .spec-table th {
-  background-color: #f0f0f0;
-  color: #333;
+  background-color: #f3f3f3;
+  font-weight: bold;
 }
 
 .spec-table tr:nth-child(even) {
-  background-color: #f9f9f9;
+  background-color: #fafafa;
 }
 
+/* Footer */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 30px 15px;
+  font-size: 16px;
+}
+
+.footer a {
+  color: #ffa726;
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
 @media screen and (max-width: 768px) {
-  body {
-    padding: 10px;
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar a {
+    margin: 10px 0;
   }
 
   .section {
-    font-size: 18px;
-    padding: 30px 10px;
-    height: auto;
+    padding: 40px 10px;
   }
 
-  .head {
-    font-size: 1.5em;
+  .feature-block h2 {
+    font-size: 20px;
+  }
+
+  .head h1 {
+    font-size: 1.6em;
   }
 }
